@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="NATS Bus — OneMind OS" description="The NATS message bus — the nervous system of the OneMind fabric.">
+<!-- NATS Bus v2 | /onemind/nats/ -->
+<section class="hero-full" style="min-height:auto;padding:3rem 0 2rem;">
+  <div class="hero-badge">THE NERVOUS SYSTEM</div>
+  <h1 style="font-size:2.8rem;">The <span style="color:var(--accent-bright);">NATS</span> Message Bus</h1>
+  <p class="hero-sub" style="font-size:1.1rem;max-width:600px;">NATS is the central nervous system of OneMind OS. Every agent, sensor, camera, robot, app, and dashboard communicates through it. Publish once. Every subscriber gets it. No REST APIs. No polling. No webhooks.</p>
+</section>
+
+<section style="padding:2rem 0;">
+  <h2 style="color:var(--accent-bright);margin-bottom:1.5rem;">How NATS Powers OneMind</h2>
+  <div class="card-grid two-col">
+    <div class="card"><h4>📡 Pub-Sub Core</h4><p>Subject-based addressing. agents.prompt.hermes.zeus.legacy — publish a prompt, Legacy responds. fabric.sensor.temperature.* — every temp sensor publishes here. No service discovery. No load balancers. Pure subject routing.</p></div>
+    <div class="card"><h4>💾 JetStream Persistence</h4><p>Streams capture every message. Replay any time window. The audit trail is built in. sensor-readings stream keeps 30 days of all sensor data. agent-responses stream stores every AI answer forever.</p></div>
+    <div class="card"><h4>🌐 Leaf Nodes</h4><p>Extend the bus to edge locations. A Raspberry Pi in the greenhouse becomes a leaf node. Messages flow transparently between the hub and the leaf. The edge is first-class.</p></div>
+    <div class="card"><h4>🔌 MQTT Bridge</h4><p>IoT devices speak MQTT. NATS bridges it transparently. An ESP32 publishing to greenhouse/soil becomes fabric.sensor.greenhouse.soil on the bus. No protocol translation layer needed.</p></div>
+    <div class="card"><h4>🔐 Multi-Tenant Security</h4><p>NATS accounts: SYS, CORE, FABRIC, INTERFACE. Each account has its own subject space, imports/exports, and auth. Agents can't read user data. Sensors can't publish to agent subjects.</p></div>
+    <div class="card"><h4>📊 Observable</h4><p>NATS Dashboard at :5173. AgentTap TUI. Every message, every connection, every stream — visible in real time. The bus is transparent by design.</p></div>
+  </div>
+</section>
+
+<section style="padding:2rem 0;border-top:1px solid var(--line);">
+  <h2 style="color:var(--accent-bright);margin-bottom:1.5rem;">Subject Map (Core Subjects)</h2>
+  <div style="overflow-x:auto;">
+    <table style="width:100%;border-collapse:collapse;font-size:0.85rem;">
+      <thead><tr style="border-bottom:1px solid var(--line);text-align:left;"><th style="padding:0.5rem;color:var(--accent-bright);">Subject Pattern</th><th style="padding:0.5rem;color:var(--accent-bright);">Purpose</th><th style="padding:0.5rem;color:var(--accent-bright);">Account</th></tr></thead>
+      <tbody>
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);"><td style="padding:0.5rem;font-family:monospace;">agents.prompt.*</td><td style="padding:0.5rem;">AI agent tasking + responses</td><td style="padding:0.5rem;">CORE</td></tr>
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);"><td style="padding:0.5rem;font-family:monospace;">fabric.sensor.*</td><td style="padding:0.5rem;">All sensor telemetry</td><td style="padding:0.5rem;">FABRIC</td></tr>
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);"><td style="padding:0.5rem;font-family:monospace;">fabric.robot.*</td><td style="padding:0.5rem;">Drone/robot telemetry + commands</td><td style="padding:0.5rem;">FABRIC</td></tr>
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);"><td style="padding:0.5rem;font-family:monospace;">fabric.camera.*</td><td style="padding:0.5rem;">Camera detections + snapshots</td><td style="padding:0.5rem;">FABRIC</td></tr>
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);"><td style="padding:0.5rem;font-family:monospace;">tak.cot.*</td><td style="padding:0.5rem;">TAK Cursor-on-Target events</td><td style="padding:0.5rem;">INTERFACE</td></tr>
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);"><td style="padding:0.5rem;font-family:monospace;">tak.mission.*</td><td style="padding:0.5rem;">TAK mission data</td><td style="padding:0.5rem;">INTERFACE</td></tr>
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);"><td style="padding:0.5rem;font-family:monospace;">om.task.*</td><td style="padding:0.5rem;">Task engine — work queue</td><td style="padding:0.5rem;">CORE</td></tr>
+        <tr><td style="padding:0.5rem;font-family:monospace;">om.presence.*</td><td style="padding:0.5rem;">Voice bridge + user presence</td><td style="padding:0.5rem;">CORE</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<div style="text-align:center;padding:2rem 0;">
+  <a href="/resources/starter-kit/" class="btn-primary" style="display:inline-block;font-size:1rem;">Get the Full Subject Map →</a>
+</div>
+</BaseLayout>

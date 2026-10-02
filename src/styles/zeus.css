@@ -198,3 +198,13 @@ section      { padding:clamp(5rem,10vw,8rem) clamp(1.5rem,5vw,4rem); }
   .footer-inner { flex-direction:column; gap:2rem; }
   .footer-links { gap:1.5rem; }
 }
+
+/* ═══ Hero components — v3.1 additions ═══ */
+.hero-badge { display:inline-block; font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.14em; color:var(--red-bright); border:1px solid var(--red); padding:4px 12px; border-radius:999px; margin-bottom:1.4rem; background:rgba(139,0,0,0.08); }
+.hero-sub   { font-size:clamp(1.05rem, 2vw, 1.3rem); line-height:1.65; color:#e6e9ee; max-width:640px; margin-top:1.25rem; }
+.stat-chip  { display:inline-flex; align-items:center; gap:0.35rem; font-size:0.8rem; font-weight:600; color:#e6e9ee; border:1px solid var(--line); background:var(--black-2); padding:0.4rem 0.9rem; border-radius:999px; white-space:nowrap; }
+.stat-chip:hover { border-color:var(--red); }
+
+/* ═══ Footer social icon (BaseLayout uses it) ═══ */
+.footer-social-icon { display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:6px; font-size:13px; color:#d4d7dc; text-decoration:none; border:1px solid var(--line); transition:color 0.15s,border-color 0.15s; }
+.footer-social-icon:hover { color:var(--white); border-color:var(--red); }

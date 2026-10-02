@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Consulting — Zeus DeLaCruz" description="Two-week done-with-you consulting sprints for sovereign infrastructure builds.">
+<!-- Consulting v2 | /services/consulting/ -->
+<section class="hero-full" style="min-height:auto;padding:3rem 0 2rem;">
+  <div class="hero-badge">DONE-WITH-YOU</div>
+  <h1 style="font-size:2.8rem;">We build your <span style="color:var(--accent-bright);">sovereign stack</span> together.</h1>
+  <p class="hero-sub" style="font-size:1.1rem;max-width:600px;">2-week or 4-week sprint. I pair with you directly — architecture, deployment, configuration. You learn the stack by building it.</p>
+</section>
+
+<section style="padding:2rem 0;">
+  <h2 style="color:var(--accent-bright);margin-bottom:1rem;">What We Cover</h2>
+  <div class="card-grid two-col">
+    <div class="card"><h4>📐 Architecture Design</h4><p>NATS subject topology, leaf node routing, JetStream stream design, security boundaries. The blueprint comes first.</p></div>
+    <div class="card"><h4>🐳 Docker Compose Stack</h4><p>Full multi-service deployment. NATS, TAK Server, ClickHouse, agents, MediaMTX, Frigate. One command to launch.</p></div>
+    <div class="card"><h4>🧠 Agent Configuration</h4><p>Legacy deployment, pillar agent setup, skill authoring, NATS routing. Your agents wake up knowing your stack.</p></div>
+    <div class="card"><h4>🗺️ TAK Deployment</h4><p>TAK Server hardening, certificate management, CloudTAK gateway, plugin installation. Your common operating picture goes live.</p></div>
+    <div class="card"><h4>📊 Dashboard + Monitoring</h4><p>Grafana dashboards, ClickHouse queries, NATS monitoring, alert rules. You see everything.</p></div>
+    <div class="card"><h4>📚 Documentation</h4><p>Custom runbook for your exact stack. Architecture diagram, subject map, port map, backup strategy. Everything documented.</p></div>
+  </div>
+</section>
+
+<section style="padding:2rem 0;border-top:1px solid var(--line);">
+  <h2 style="color:var(--accent-bright);margin-bottom:1rem;">Pricing</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;">
+    <div style="background:var(--black-2);border:1px solid var(--line);border-radius:0.5rem;padding:1.5rem;">
+      <h4>2-Week Sprint</h4>
+      <p style="font-size:1.5rem;color:var(--accent-bright);margin:0.5rem 0;">$2,500</p>
+      <p style="font-size:0.9rem;">Best for: single-component deep dive — NATS setup, TAK deployment, agent configuration. Focused scope. Clear deliverable.</p>
+    </div>
+    <div style="background:var(--black-2);border:1px solid var(--line);border-radius:0.5rem;padding:1.5rem;">
+      <h4>4-Week Sprint</h4>
+      <p style="font-size:1.5rem;color:var(--accent-bright);margin:0.5rem 0;">$5,000</p>
+      <p style="font-size:0.9rem;">Best for: full stack deployment. End-to-end: architecture → docker → agents → TAK → dashboards → documentation. You walk away with a running sovereign ops center.</p>
+    </div>
+  </div>
+  <p style="margin-top:1.5rem;"><strong>14-day no-questions refund.</strong> Custom scope available — book a call and we'll scope it together.</p>
+</section>
+
+<div style="text-align:center;padding:2rem 0;">
+  <a href="/contact/" class="btn-primary" style="display:inline-block;font-size:1rem;">Book a Discovery Call →</a>
+  <p style="margin-top:0.75rem;font-size:0.85rem;color:#9ca3af;">⚠️ Zoho booking form here</p>
+</div>
+</BaseLayout>

@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Plugins — OneMind OS" description="OneMind OS plugins — TAK, NATS, Hermes, ClickHouse, and more.">
+<!-- Plugins v2 | /onemind/plugins/ -->
+<section class="hero-full" style="min-height:auto;padding:3rem 0 2rem;">
+  <div class="hero-badge">EXTEND</div>
+  <h1 style="font-size:2.8rem;"><span style="color:var(--accent-bright);">Plugins</span> for the OneMind Fabric</h1>
+  <p class="hero-sub" style="font-size:1.1rem;max-width:600px;">TAK plugins, NATS bridges, Hermes extensions — all open source. Plug them into your stack. Extend the fabric with new capabilities.</p>
+</section>
+
+<section style="padding:2rem 0;">
+  <div class="card-grid two-col">
+    <div class="card"><h4>🔗 onetak-plugin-nats</h4><p>Bridges TAK to the NATS bus. Every TAK event (CoT, chat, sensor) publishes to NATS. Every NATS message can inject into TAK. Full bidirectional sync.</p><p style="font-size:0.8rem;color:var(--accent-bright);margin-top:0.5rem;">GitHub: onemindos/onetak-plugin-nats</p></div>
+    <div class="card"><h4>🤖 onetak-plugin-hermes</h4><p>Task AI agents directly from TAK. Right-click → "Ask Legacy." The agent response appears in TAK chat. Full agent fabric accessible from the field.</p><p style="font-size:0.8rem;color:var(--accent-bright);margin-top:0.5rem;">GitHub: onemindos/onetak-plugin-hermes</p></div>
+    <div class="card"><h4>⚙️ onetak-plugin-ops</h4><p>Infrastructure health overlay on TAK map. Server status, NATS throughput, ClickHouse query latency — all geo-referenced on your COP.</p><p style="font-size:0.8rem;color:var(--accent-bright);margin-top:0.5rem;">GitHub: onemindos/onetak-plugin-ops</p></div>
+    <div class="card"><h4>🎙️ onetak-plugin-mumble</h4><p>Voice comms in TAK. Mumble integration. Push-to-talk from ATAK. Voice bridges to NATS for agent transcription.</p><p style="font-size:0.8rem;color:var(--accent-bright);margin-top:0.5rem;">GitHub: onemindos/onetak-plugin-mumble</p></div>
+    <div class="card"><h4>📊 onetak-plugin-clickhouse</h4><p>Replay historical TAK data from ClickHouse. Scrub through time. See what happened on any day, any hour. Mission replay for after-action.</p><p style="font-size:0.8rem;color:var(--accent-bright);margin-top:0.5rem;">GitHub: onemindos/onetak-plugin-clickhouse</p></div>
+    <div class="card"><h4>🧩 onetak-plugin-legacy-ai</h4><p>Legacy's direct TAK integration. Auto-detection alerts. Anomaly flagging. Predictive routing. The AI layer on your COP.</p><p style="font-size:0.8rem;color:var(--accent-bright);margin-top:0.5rem;">GitHub: onemindos/onetak-plugin-legacy-ai</p></div>
+  </div>
+</section>
+
+<div style="text-align:center;padding:2rem 0;">
+  <a href="/resources/github/" class="btn-primary" style="display:inline-block;font-size:1rem;">All Plugins on GitHub →</a>
+</div>
+</BaseLayout>

@@ -1,7 +1,11 @@
 ---
 // BaseLayout.astro — Chrome wrapper for every page
-// Nav at top, Footer at bottom, zeus.css injected
+// Props: title, description (optional — sensible defaults if omitted)
 import Nav from '../components/Nav.astro';
+
+const { title, description } = Astro.props;
+const pageTitle = title ?? 'Zeus DeLaCruz — Builder, Operator, Architect';
+const pageDesc = description ?? 'I build sovereign infrastructure — AI agents, meshed networks, robotic systems, and the operating system that runs them all. Self-hosted. Open-source. Yours forever.';
 ---
 
 <!DOCTYPE html>
@@ -9,8 +13,8 @@ import Nav from '../components/Nav.astro';
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zeus DeLaCruz — Builder, Operator, Architect</title>
-  <meta name="description" content="I build sovereign infrastructure — AI agents, meshed networks, robotic systems, and the operating system that runs them all. Self-hosted. Open-source. Yours forever." />
+  <title>{pageTitle}</title>
+  <meta name="description" content={pageDesc} />
   <link rel="stylesheet" href="/styles/zeus.css" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 </head>

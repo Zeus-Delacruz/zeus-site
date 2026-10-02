@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Tools — OneMind OS" description="Tools and templates for building your own sovereign stack.">
+<!-- Tools v2 | /onemind/tools/ -->
+<section class="hero-full" style="min-height:auto;padding:3rem 0 2rem;">
+  <div class="hero-badge">THE VAULT</div>
+  <h1 style="font-size:2.8rem;"><span style="color:var(--accent-bright);">Tools & Templates</span></h1>
+  <p class="hero-sub" style="font-size:1.1rem;max-width:600px;">docker-compose files. NATS configs. Agent profiles. Grafana dashboards. ClickHouse schemas. Everything pre-built, tested, and ready to deploy.</p>
+</section>
+
+<section style="padding:2rem 0;">
+  <h2 style="color:var(--accent-bright);margin-bottom:1.5rem;">Available Templates</h2>
+  <div class="card-grid two-col">
+    <div class="card"><h4>🐳 Full Stack docker-compose</h4><p style="font-size:0.9rem;">12 services in one file. NATS, TAK Server, ClickHouse, Hermes agents, MediaMTX, Frigate, Grafana, CloudTAK, Mumble, Node-RED. `docker compose up -d` and it's running.</p></div>
+    <div class="card"><h4>📡 NATS Subject Map</h4><p style="font-size:0.9rem;">Complete subject topology. Pub patterns, sub patterns, JetStream stream configs, consumer configs, account exports/imports. The nervous system blueprint.</p></div>
+    <div class="card"><h4>🧠 Agent Profiles</h4><p style="font-size:0.9rem;">Legacy + SO + HP + LE + GE + Edge. Each profile: model pinning, skill set, NATS routing, memory config. Clone and deploy your own agent fabric.</p></div>
+    <div class="card"><h4>📊 Grafana Dashboards</h4><p style="font-size:0.9rem;">Pre-built dashboards: NATS throughput, ClickHouse query latency, TAK event rate, agent response times, sensor readings, camera detections. JSON exports — import and go.</p></div>
+    <div class="card"><h4>🗄️ ClickHouse Schemas</h4><p style="font-size:0.9rem;">Table definitions for sensor data, agent responses, TAK events, camera detections, system metrics. Materialized views for common queries. 10-year TTL.</p></div>
+    <div class="card"><h4>🔒 Security Configs</h4><p style="font-size:0.9rem;">NATS account JWTs. Tailscale ACLs. Firewall rules. TAK certificate config. Caddy reverse proxy. The security baseline.</p></div>
+  </div>
+</section>
+
+<div style="text-align:center;padding:2rem 0;">
+  <a href="/resources/starter-kit/" class="btn-primary" style="display:inline-block;font-size:1rem;">Download All Templates →</a>
+  <p style="margin-top:0.75rem;font-size:0.85rem;color:#9ca3af;">Everything in the Starter Kit. More in the Community Vault.</p>
+</div>
+</BaseLayout>

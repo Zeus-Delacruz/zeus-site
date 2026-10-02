@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Blog — Field Notes & Dispatches" description="Build logs, teardowns, and lessons from running sovereign infrastructure.">
+<!-- Blog Index v2 | /blog/ -->
+<section class="hero-full" style="min-height:auto;padding:3rem 0 2rem;">
+  <div class="hero-badge">FIELD NOTES</div>
+  <h1 style="font-size:2.8rem;">Build logs, <span style="color:var(--accent-bright);">dispatches,</span> and deep dives.</h1>
+  <p class="hero-sub" style="font-size:1.1rem;max-width:600px;">Every YouTube long becomes a blog post. Every build decision gets documented. This is the written record of the OneMind stack coming together — week by week, commit by commit.</p>
+</section>
+
+<section style="padding:2rem 0;">
+  <h2 style="color:var(--accent-bright);margin-bottom:1.5rem;">Categories</h2>
+  <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+    <span class="stat-chip">⚡ SO · Tech & Infra</span>
+    <span class="stat-chip">💪 HP · Performance</span>
+    <span class="stat-chip">🏡 LE · Home & Land</span>
+    <span class="stat-chip">👑 GE · Business & Empire</span>
+    <span class="stat-chip">🧠 AI Agents</span>
+    <span class="stat-chip">🗺️ TAK</span>
+    <span class="stat-chip">📡 NATS</span>
+    <span class="stat-chip">🤖 Robotics</span>
+    <span class="stat-chip">🏗️ Build-in-Public</span>
+    <span class="stat-chip">📊 Infrastructure</span>
+  </div>
+</section>
+
+<section style="padding:2rem 0;border-top:1px solid var(--line);">
+  <h2 style="color:var(--accent-bright);margin-bottom:1rem;">Content Engine</h2>
+  <p>3 YouTube longs per week → each becomes a blog post here. 1 short per day clipped from longs → cross-posted to X, TikTok, IG Reels. Every piece of content ends in one CTA: the Starter Kit. The blog is the permanent layer — YouTube is the spark, the blog makes it findable forever.</p>
+</section>
+
+<!-- Posts auto-render via WP template card grid below this content -->
+<div style="text-align:center;padding:2rem 0;">
+  <a href="/resources/starter-kit/" class="btn-primary" style="display:inline-block;font-size:1rem;">Get the Starter Kit →</a>
+</div>
+</BaseLayout>

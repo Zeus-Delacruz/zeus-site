@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="About — Zeus DeLaCruz" description="Zeus DeLaCruz's story — builder, operator, architect of sovereign infrastructure.">
+<!-- About v2 — Deeper | /about/ -->
+<section class="hero-full" style="min-height:auto;padding:3rem 0 2rem;">
+  <div class="hero-badge">ABOUT</div>
+  <h1 style="font-size:2.8rem;">Zeus <span style="color:var(--accent-bright);">DeLaCruz</span></h1>
+  <p class="hero-sub" style="font-size:1.15rem;max-width:620px;">Builder. Operator. Architect. I design and deploy sovereign infrastructure — the kind you own, not rent. My work sits at the intersection of AI agents, meshed networks, robotic systems, and the operating system that orchestrates them all.</p>
+</section>
+
+<section style="padding:2rem 0;">
+  <h2 style="color:var(--accent-bright);margin-bottom:1.5rem;">The Build Philosophy</h2>
+  <div class="card-grid two-col">
+    <div class="card"><h4>🏠 Self-Hosted Everything</h4><p>If it runs on someone else's computer, it's not yours. Every piece of the OneMind stack runs on hardware you control — a $6 VPS, a Raspberry Pi, a Dell tower in your closet. No SaaS dependencies. No "credit system." No API key that can be revoked.</p></div>
+    <div class="card"><h4>📡 Bus-Owns-Truth</h4><p>All state flows through NATS. Not a database. Not a REST API. A message bus where every component publishes what it knows and subscribes to what it needs. The bus is the single source of truth — immutable, replayable, auditable.</p></div>
+    <div class="card"><h4>🔓 Open Core</h4><p>The architecture is open. The configs are templates. The code ships with the product. You can fork it, extend it, or rip it apart. The only thing proprietary is the integration — the years of knowing how these pieces fit together.</p></div>
+    <div class="card"><h4>⚡ Action-First</h4><p>I don't plan for months and ship nothing. I build live, in public, on YouTube. Every video ships something real. The community watches the stack grow in real time. No vaporware. No "coming soon." Either it works right now or it's not on the site.</p></div>
+  </div>
+</section>
+
+<section style="padding:2rem 0;border-top:1px solid var(--line);">
+  <h2 style="color:var(--accent-bright);margin-bottom:1.5rem;">What I've Built</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;">
+    <div style="background:var(--black-2);border:1px solid var(--line);border-radius:0.5rem;padding:1.25rem;">
+      <h4 style="margin-bottom:0.25rem;">OneMind OS</h4>
+      <p style="font-size:0.9rem;">The sovereign multi-agent operating system. 5 AI agents on a NATS fabric. TAK common operating picture. ClickHouse time machine. Docker-deployable. Live at onemindos.com.</p>
+    </div>
+    <div style="background:var(--black-2);border:1px solid var(--line);border-radius:0.5rem;padding:1.25rem;">
+      <h4 style="margin-bottom:0.25rem;">Legacy — The Mother</h4>
+      <p style="font-size:0.9rem;">550B-parameter sovereign AI agent. The central intelligence of the OneMind fabric. Orchestrates 4 pillar agents + edge daughter. Lives on NATS. Never sleeps.</p>
+    </div>
+    <div style="background:var(--black-2);border:1px solid var(--line);border-radius:0.5rem;padding:1.25rem;">
+      <h4 style="margin-bottom:0.25rem;">OneTAK</h4>
+      <p style="font-size:0.9rem;">TAK with intelligence built in. Plugins for NATS bridging, AI agent tasking, voice comms (Mumble), ClickHouse replay, and Hermes integration. The operators' TAK.</p>
+    </div>
+    <div style="background:var(--black-2);border:1px solid var(--line);border-radius:0.5rem;padding:1.25rem;">
+      <h4 style="margin-bottom:0.25rem;">Sovereign Node</h4>
+      <p style="font-size:0.9rem;">The on-prem appliance. One box that runs the entire OneMind stack — NATS, TAK Server, AI agents, ClickHouse, MediaMTX, Frigate. Plug it in. Point it at your cameras. Done.</p>
+    </div>
+    <div style="background:var(--black-2);border:1px solid var(--line);border-radius:0.5rem;padding:1.25rem;">
+      <h4 style="margin-bottom:0.25rem;">CloudTAK</h4>
+      <p style="font-size:0.9rem;">Secure TAK-over-web gateway. Lets your team see the common operating picture from any browser, any device, without installing ATAK. WebRTC streaming. End-to-end encrypted.</p>
+    </div>
+    <div style="background:var(--black-2);border:1px solid var(--line);border-radius:0.5rem;padding:1.25rem;">
+      <h4 style="margin-bottom:0.25rem;">The Content Engine</h4>
+      <p style="font-size:0.9rem;">YouTube channel building in public. 3 longs/week. 1 short/day. Every video ships something real. Blog, X, TikTok, Instagram — the content machine that feeds the funnel.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding:2rem 0;border-top:1px solid var(--line);">
+  <h2 style="color:var(--accent-bright);margin-bottom:1rem;">The Stack</h2>
+  <div style="overflow-x:auto;">
+    <table style="width:100%;border-collapse:collapse;font-size:0.9rem;">
+      <thead><tr style="border-bottom:1px solid var(--line);text-align:left;"><th style="padding:0.5rem;color:var(--accent-bright);">Layer</th><th style="padding:0.5rem;color:var(--accent-bright);">Technology</th><th style="padding:0.5rem;color:var(--accent-bright);">Role</th></tr></thead>
+      <tbody>
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);"><td style="padding:0.5rem;">Foundation</td><td style="padding:0.5rem;">Docker · Tailscale · DOKS</td><td style="padding:0.5rem;">Compute + mesh networking</td></tr>
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);"><td style="padding:0.5rem;">Nervous System</td><td style="padding:0.5rem;">NATS · JetStream · MQTT</td><td style="padding:0.5rem;">Message bus + persistence</td></tr>
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);"><td style="padding:0.5rem;">Eyes</td><td style="padding:0.5rem;">TAK Server · CloudTAK · MediaMTX</td><td style="padding:0.5rem;">Common operating picture</td></tr>
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);"><td style="padding:0.5rem;">Senses</td><td style="padding:0.5rem;">Frigate · ADS-B · SDR · sensors</td><td style="padding:0.5rem;">Computer vision + RF awareness</td></tr>
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);"><td style="padding:0.5rem;">Memory</td><td style="padding:0.5rem;">ClickHouse · PostGIS · Tile38</td><td style="padding:0.5rem;">Time-series + spatial DB</td></tr>
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);"><td style="padding:0.5rem;">Mind</td><td style="padding:0.5rem;">Hermes · Legacy · 4 Pillars</td><td style="padding:0.5rem;">AI agent fabric</td></tr>
+        <tr><td style="padding:0.5rem;">Field</td><td style="padding:0.5rem;">Drones · robots · wearables</td><td style="padding:0.5rem;">Physical automation</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<div style="text-align:center;padding:2rem 0;">
+  <a href="/resources/starter-kit/" class="btn-primary" style="display:inline-block;font-size:1rem;">Get the Starter Kit →</a>
+  <p style="margin-top:0.75rem;font-size:0.85rem;color:#9ca3af;">The full stack in one docker-compose. Free.</p>
+</div>
+</BaseLayout>

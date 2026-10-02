@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Hardware & Robotics — OneMind OS" description="Sovereign hardware — drones, cameras, sensors, and the Sovereign Node.">
+<!-- Robotics & Hardware v2 | /onemind/robotics/ -->
+<section class="hero-full" style="min-height:auto;padding:3rem 0 2rem;">
+  <div class="hero-badge">THE FIELD</div>
+  <h1 style="font-size:2.8rem;"><span style="color:var(--accent-bright);">Hardware & Robotics</span></h1>
+  <p class="hero-sub" style="font-size:1.1rem;max-width:600px;">The physical layer of the OneMind fabric. Cameras, sensors, drones, robots, and the Sovereign Node appliance that runs it all. Everything wired to the NATS bus.</p>
+</section>
+
+<section style="padding:2rem 0;">
+  <h2 style="color:var(--accent-bright);margin-bottom:1.5rem;">Products & Kits</h2>
+  <div class="card-grid two-col">
+    <div class="card"><h4>🖥️ Sovereign Node</h4><p style="font-size:0.9rem;">The on-prem appliance. Mini PC or 1U server. Pre-loaded with OneMind OS. Plug in power, network, and cameras. The stack boots and the agents wake up. Available Q1 2027.</p><p style="font-size:0.85rem;color:var(--accent-bright);margin-top:0.5rem;">⚠️ Waitlist — join the community for first access</p></div>
+    <div class="card"><h4>📷 Camera Kit</h4><p style="font-size:0.9rem;">2-4 IP cameras + MediaMTX + Frigate NVR. Pre-configured. Point at your perimeter. AI object detection running within 10 minutes of plugging in.</p><p style="font-size:0.85rem;color:var(--accent-bright);margin-top:0.5rem;">⚠️ Waitlist</p></div>
+    <div class="card"><h4>📡 Sensor Mesh</h4><p style="font-size:0.9rem;">Temperature, humidity, soil moisture, air quality, motion. ESP32-based. MQTT to NATS bridge. Deploy 10 sensors in an afternoon. All data flows to ClickHouse.</p><p style="font-size:0.85rem;color:var(--accent-bright);margin-top:0.5rem;">⚠️ Waitlist</p></div>
+    <div class="card"><h4>🛸 Drone Integration</h4><p style="font-size:0.9rem;">MAVLink to NATS bridge. Drone telemetry appears on TAK map. Autonomous patrol routes. Geofence alerts. Compatible with ArduPilot and PX4.</p><p style="font-size:0.85rem;color:var(--accent-bright);margin-top:0.5rem;">In development — watch GitHub</p></div>
+    <div class="card"><h4>⌚ Field Pack</h4><p style="font-size:0.9rem;">Ruggedized kit: battery, SDR, mesh radio, Android tablet with ATAK. Everything a field operator needs to join the fabric from anywhere.</p><p style="font-size:0.85rem;color:var(--accent-bright);margin-top:0.5rem;">⚠️ Waitlist</p></div>
+    <div class="card"><h4>🏠 Homestead Bundle</h4><p style="font-size:0.9rem;">Sovereign Node + Camera Kit + Sensor Mesh + Field Pack. The complete physical layer for a homestead. Discounted bundle pricing.</p><p style="font-size:0.85rem;color:var(--accent-bright);margin-top:0.5rem;">⚠️ Waitlist</p></div>
+  </div>
+</section>
+
+<div style="text-align:center;padding:2rem 0;">
+  <a href="/resources/community/" class="btn-primary" style="display:inline-block;font-size:1rem;">Join Community for Early Access →</a>
+</div>
+</BaseLayout>
