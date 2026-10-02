@@ -1,18 +1,19 @@
 ---
-// Nav.astro — Zeus DeLaCruz site navigation v3.0
+// Nav.astro — Zeus DeLaCruz site navigation v3.4
 // One file. Used on every page via BaseLayout.
+// v3.4: real burger (3-line, aria, overlay, scroll-lock), mobile menu w/ CTA + socials
 ---
 
-<nav class="zeus-nav">
+<nav class="zeus-nav" id="zeus-nav">
   <div class="nav-inner">
     <a href="/" class="nav-logo">Zeus DeLaCruz</a>
 
-    <!-- Desktop nav -->
+    <!-- Desktop nav (hidden < 1100px) -->
     <div class="nav-desktop">
 
       <!-- Services dropdown -->
       <div class="mega-parent">
-        <button class="mega-trigger" onclick="toggleDropdown('mega-dropdown-services',this)">Services ▾<span class="mega-chevron">⌄</span></button>
+        <button class="mega-trigger" onclick="toggleDropdown('mega-dropdown-services',this)" aria-haspopup="true" aria-expanded="false">Services <span class="mega-chevron">⌄</span></button>
         <div class="mega-dropdown mega-dropdown--sm" id="mega-dropdown-services">
           <a href="/services/consulting/" class="mega-item">
             <div class="mega-item-label">Consulting</div>
@@ -35,7 +36,7 @@
 
       <!-- OneMind OS mega-menu -->
       <div class="mega-parent">
-        <button class="mega-trigger" onclick="toggleDropdown('mega-dropdown-onemind',this)">OneMind OS ▾<span class="mega-chevron">⌄</span></button>
+        <button class="mega-trigger" onclick="toggleDropdown('mega-dropdown-onemind',this)" aria-haspopup="true" aria-expanded="false">OneMind OS <span class="mega-chevron">⌄</span></button>
         <div class="mega-dropdown" id="mega-dropdown-onemind">
           <div class="mega-col">
             <div class="mega-col-heading">Platform</div>
@@ -47,25 +48,25 @@
               <div class="mega-item-label">AI Agents</div>
               <div class="mega-item-desc">Deployable intelligence on the fabric</div>
             </a>
-            <a href="/onemind/agents/legacy/" class="mega-item" style="margin-left:1rem;border-left:1px solid var(--line);padding-left:1rem;">
-              <div class="mega-item-label" style="font-size:0.78rem;">→ Legacy</div>
+            <a href="/onemind/agents/legacy/" class="mega-item mega-sub">
+              <div class="mega-item-label">→ Legacy</div>
               <div class="mega-item-desc">The Mother — 550B sovereign AI agent</div>
             </a>
-            <a href="/onemind/agents/so/" class="mega-item" style="margin-left:1rem;border-left:1px solid var(--line);padding-left:1rem;">
-              <div class="mega-item-label" style="font-size:0.78rem;">→ SO</div>
-              <div class="mega-item-desc">Sovereign Operations — DeepSeek V4 Pro 262K</div>
+            <a href="/onemind/agents/so/" class="mega-item mega-sub">
+              <div class="mega-item-label">→ SO</div>
+              <div class="mega-item-desc">Sovereign Operations — DeepSeek V4 Pro</div>
             </a>
-            <a href="/onemind/agents/hp/" class="mega-item" style="margin-left:1rem;border-left:1px solid var(--line);padding-left:1rem;">
-              <div class="mega-item-label" style="font-size:0.78rem;">→ HP</div>
-              <div class="mega-item-desc">Holistic Performance — Qwen3.5 397B MoE 131K</div>
+            <a href="/onemind/agents/hp/" class="mega-item mega-sub">
+              <div class="mega-item-label">→ HP</div>
+              <div class="mega-item-desc">Holistic Performance — Qwen3.5 397B</div>
             </a>
-            <a href="/onemind/agents/le/" class="mega-item" style="margin-left:1rem;border-left:1px solid var(--line);padding-left:1rem;">
-              <div class="mega-item-label" style="font-size:0.78rem;">→ LE</div>
-              <div class="mega-item-desc">Legacy Evolution — Kimi K2.6 262K</div>
+            <a href="/onemind/agents/le/" class="mega-item mega-sub">
+              <div class="mega-item-label">→ LE</div>
+              <div class="mega-item-desc">Legacy Evolution — Kimi K2.6</div>
             </a>
-            <a href="/onemind/agents/ge/" class="mega-item" style="margin-left:1rem;border-left:1px solid var(--line);padding-left:1rem;">
-              <div class="mega-item-label" style="font-size:0.78rem;">→ GE</div>
-              <div class="mega-item-desc">Generational Empire — Kimi K3 1M</div>
+            <a href="/onemind/agents/ge/" class="mega-item mega-sub">
+              <div class="mega-item-label">→ GE</div>
+              <div class="mega-item-desc">Generational Empire — Kimi K3</div>
             </a>
             <a href="/onemind/plugins/" class="mega-item">
               <div class="mega-item-label">Plugins</div>
@@ -80,7 +81,7 @@
             <div class="mega-col-heading">Stack</div>
             <a href="/onemind/nats/" class="mega-item">
               <div class="mega-item-label">NATS Bus</div>
-              <div class="mega-item-desc">The nervous system — subjects, JetStream, leaf nodes</div>
+              <div class="mega-item-desc">The nervous system — subjects, JetStream</div>
             </a>
             <a href="/onemind/education/" class="mega-item">
               <div class="mega-item-label">Education</div>
@@ -88,7 +89,7 @@
             </a>
             <a href="/onemind/tools/" class="mega-item">
               <div class="mega-item-label">Tools</div>
-              <div class="mega-item-desc">docker-compose, NATS map, agent profiles, dashboards</div>
+              <div class="mega-item-desc">docker-compose, NATS map, dashboards</div>
             </a>
           </div>
         </div>
@@ -96,7 +97,7 @@
 
       <!-- Resources dropdown -->
       <div class="mega-parent">
-        <button class="mega-trigger" onclick="toggleDropdown('mega-dropdown-resources',this)">Resources ▾<span class="mega-chevron">⌄</span></button>
+        <button class="mega-trigger" onclick="toggleDropdown('mega-dropdown-resources',this)" aria-haspopup="true" aria-expanded="false">Resources <span class="mega-chevron">⌄</span></button>
         <div class="mega-dropdown mega-dropdown--sm" id="mega-dropdown-resources">
           <a href="/resources/starter-kit/" class="mega-item">
             <div class="mega-item-label">Starter Kit</div>
@@ -119,28 +120,37 @@
       <a href="/contact/" class="nav-simple-link">Contact</a>
 
       <!-- Social icons -->
-      <div style="display:flex;gap:0.375rem;margin-left:0.5rem;">
-        <a href="https://youtube.com/@zeusdelacruz" class="nav-social-icon" target="_blank" title="YouTube">▶</a>
-        <a href="https://x.com/zeusdelacruz" class="nav-social-icon" target="_blank" title="X">𝕏</a>
-        <a href="https://instagram.com/zeusdelacruz" class="nav-social-icon" target="_blank" title="Instagram">◉</a>
-        <a href="https://tiktok.com/@zeusdelacruz" class="nav-social-icon" target="_blank" title="TikTok">♪</a>
-        <a href="https://github.com/onemindos" class="nav-social-icon" target="_blank" title="GitHub">⌥</a>
-        <a href="https://linkedin.com/in/zeusdelacruz" class="nav-social-icon" target="_blank" title="LinkedIn">in</a>
+      <div class="nav-social-icons">
+        <a href="https://youtube.com/@zeusdelacruz" class="nav-social-icon" target="_blank" rel="noopener" title="YouTube">▶</a>
+        <a href="https://x.com/zeusdelacruz" class="nav-social-icon" target="_blank" rel="noopener" title="X">𝕏</a>
+        <a href="https://instagram.com/zeusdelacruz" class="nav-social-icon" target="_blank" rel="noopener" title="Instagram">◉</a>
+        <a href="https://tiktok.com/@zeusdelacruz" class="nav-social-icon" target="_blank" rel="noopener" title="TikTok">♪</a>
+        <a href="https://github.com/onemindos" class="nav-social-icon" target="_blank" rel="noopener" title="GitHub">⌥</a>
+        <a href="https://linkedin.com/in/zeusdelacruz" class="nav-social-icon" target="_blank" rel="noopener" title="LinkedIn">in</a>
       </div>
     </div>
 
-    <!-- CTA button -->
+    <!-- CTA button (desktop only) -->
     <div class="nav-right">
       <a href="/resources/starter-kit/" class="btn-primary">Get the Starter Kit →</a>
     </div>
 
-    <!-- Burger (mobile) -->
-    <button class="nav-burger" onclick="toggleMobileMenu()" aria-label="Menu">☰</button>
+    <!-- Burger (mobile) — 3 real lines, animated -->
+    <button class="nav-burger" id="nav-burger" onclick="toggleMobileMenu()" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span class="burger-line top"></span>
+      <span class="burger-line mid"></span>
+      <span class="burger-line bot"></span>
+    </button>
   </div>
 </nav>
 
+<!-- Mobile menu overlay -->
+<div class="mobile-overlay" id="mobile-overlay" onclick="toggleMobileMenu()"></div>
+
 <!-- Mobile menu -->
-<div class="mobile-menu" id="mobile-menu">
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Site menu">
+  <a href="/resources/starter-kit/" class="btn-primary mobile-menu-cta-btn">Get the Starter Kit →</a>
+
   <div class="mobile-section">
     <div class="mobile-section-heading">Services</div>
     <a href="/services/consulting/" class="mobile-section-link">Consulting</a>
@@ -152,41 +162,97 @@
     <div class="mobile-section-heading">OneMind OS</div>
     <a href="/onemind/" class="mobile-section-link">Overview</a>
     <a href="/onemind/agents/" class="mobile-section-link">AI Agents</a>
-    <a href="/onemind/agents/legacy/" class="mobile-section-link" style="padding-left:1.5rem;">→ Legacy</a>
-    <a href="/onemind/agents/so/" class="mobile-section-link" style="padding-left:1.5rem;">→ SO</a>
-    <a href="/onemind/agents/hp/" class="mobile-section-link" style="padding-left:1.5rem;">→ HP</a>
-    <a href="/onemind/agents/le/" class="mobile-section-link" style="padding-left:1.5rem;">→ LE</a>
-    <a href="/onemind/agents/ge/" class="mobile-section-link" style="padding-left:1.5rem;">→ GE</a>
+    <a href="/onemind/agents/legacy/" class="mobile-section-link mobile-sub-link">→ Legacy</a>
+    <a href="/onemind/agents/so/" class="mobile-section-link mobile-sub-link">→ SO</a>
+    <a href="/onemind/agents/hp/" class="mobile-section-link mobile-sub-link">→ HP</a>
+    <a href="/onemind/agents/le/" class="mobile-section-link mobile-sub-link">→ LE</a>
+    <a href="/onemind/agents/ge/" class="mobile-section-link mobile-sub-link">→ GE</a>
     <a href="/onemind/plugins/" class="mobile-section-link">Plugins</a>
     <a href="/onemind/robotics/" class="mobile-section-link">Hardware</a>
     <a href="/onemind/nats/" class="mobile-section-link">NATS Bus</a>
     <a href="/onemind/education/" class="mobile-section-link">Education</a>
     <a href="/onemind/tools/" class="mobile-section-link">Tools</a>
   </div>
-  <a href="/resources/starter-kit/" class="mobile-simple-link">Starter Kit</a>
-  <a href="/resources/github/" class="mobile-simple-link">GitHub</a>
-  <a href="/resources/community/" class="mobile-simple-link">Community</a>
-  <a href="/blog/" class="mobile-simple-link">Blog</a>
-  <a href="/about/" class="mobile-simple-link">About</a>
-  <a href="/contact/" class="mobile-simple-link">Contact</a>
+  <div class="mobile-section">
+    <div class="mobile-section-heading">Resources</div>
+    <a href="/resources/starter-kit/" class="mobile-section-link">Starter Kit</a>
+    <a href="/resources/github/" class="mobile-section-link">GitHub</a>
+    <a href="/resources/community/" class="mobile-section-link">Community</a>
+  </div>
+  <div class="mobile-section">
+    <div class="mobile-section-heading">Site</div>
+    <a href="/" class="mobile-section-link">Home</a>
+    <a href="/blog/" class="mobile-section-link">Blog</a>
+    <a href="/about/" class="mobile-section-link">About</a>
+    <a href="/contact/" class="mobile-section-link">Contact</a>
+  </div>
+
+  <div class="mobile-menu-social">
+    <a href="https://youtube.com/@zeusdelacruz" class="nav-social-icon" target="_blank" rel="noopener">▶</a>
+    <a href="https://x.com/zeusdelacruz" class="nav-social-icon" target="_blank" rel="noopener">𝕏</a>
+    <a href="https://instagram.com/zeusdelacruz" class="nav-social-icon" target="_blank" rel="noopener">◉</a>
+    <a href="https://tiktok.com/@zeusdelacruz" class="nav-social-icon" target="_blank" rel="noopener">♪</a>
+    <a href="https://github.com/onemindos" class="nav-social-icon" target="_blank" rel="noopener">⌥</a>
+    <a href="https://linkedin.com/in/zeusdelacruz" class="nav-social-icon" target="_blank" rel="noopener">in</a>
+  </div>
 </div>
 
 <script is:inline>
+  // Dropdown toggles (desktop)
   function toggleDropdown(id, btn) {
     var dd = document.getElementById(id);
     if (!dd) return;
     var isOpen = dd.classList.contains('open');
     document.querySelectorAll('.mega-dropdown,.mega-dropdown--sm').forEach(function(d) { d.classList.remove('open'); });
-    document.querySelectorAll('.mega-trigger').forEach(function(b) { b.classList.remove('open'); });
-    if (!isOpen) { dd.classList.add('open'); btn.classList.add('open'); }
+    document.querySelectorAll('.mega-trigger').forEach(function(b) {
+      b.classList.remove('open');
+      b.setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen) {
+      dd.classList.add('open');
+      btn.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
   }
+
+  // Mobile menu — real open/close with aria, overlay, scroll lock
   function toggleMobileMenu() {
-    document.getElementById('mobile-menu').classList.toggle('open');
+    var m = document.getElementById('mobile-menu');
+    var ov = document.getElementById('mobile-overlay');
+    var b = document.getElementById('nav-burger');
+    if (!m) return;
+    var open = m.classList.toggle('open');
+    if (ov) ov.classList.toggle('open', open);
+    if (b) {
+      b.setAttribute('aria-expanded', open ? 'true' : 'false');
+      b.querySelectorAll('.burger-line').forEach(function(l) { l.classList.toggle('open', open); });
+    }
+    document.body.style.overflow = open ? 'hidden' : '';
   }
+
+  // Close mobile menu on any link tap
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('#mobile-menu a');
+    if (link && document.getElementById('mobile-menu').classList.contains('open')) {
+      toggleMobileMenu();
+    }
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      var m = document.getElementById('mobile-menu');
+      if (m && m.classList.contains('open')) toggleMobileMenu();
+      document.querySelectorAll('.mega-dropdown,.mega-dropdown--sm').forEach(function(d) { d.classList.remove('open'); });
+      document.querySelectorAll('.mega-trigger').forEach(function(b) { b.classList.remove('open'); b.setAttribute('aria-expanded', 'false'); });
+    }
+  });
+
+  // Close dropdowns on outside click
   document.addEventListener('click', function(e) {
     if (!e.target.closest('.mega-parent')) {
       document.querySelectorAll('.mega-dropdown,.mega-dropdown--sm').forEach(function(d) { d.classList.remove('open'); });
-      document.querySelectorAll('.mega-trigger').forEach(function(b) { b.classList.remove('open'); });
+      document.querySelectorAll('.mega-trigger').forEach(function(b) { b.classList.remove('open'); b.setAttribute('aria-expanded', 'false'); });
     }
   });
 </script>

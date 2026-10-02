@@ -1,0 +1,30 @@
+---
+// 404.astro — proper 404 page
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="404 — Page Not Found | Zeus DeLaCruz" description="The page you're looking for doesn't exist.">
+<section class="hero-full" style="min-height:70vh;">
+  <div class="hero-badge">404</div>
+  <h1 style="font-size:clamp(2.5rem,6vw,5rem);">Lost on the <span class="accent">fabric</span>.</h1>
+  <p class="hero-sub" style="max-width:520px;">This route doesn't exist — but the network is still up. Here's where things actually live:</p>
+  <div class="card-grid two-col" style="margin-top:2rem;max-width:640px;">
+    <a href="/" class="card" style="text-decoration:none;">
+      <h4>🏠 Homepage</h4>
+      <p style="font-size:0.9rem;">Start from the top — Builder. Operator. Architect.</p>
+    </a>
+    <a href="/blog/" class="card" style="text-decoration:none;">
+      <h4>📝 Blog</h4>
+      <p style="font-size:0.9rem;">Field notes &amp; dispatches from the build.</p>
+    </a>
+    <a href="/onemind/" class="card" style="text-decoration:none;">
+      <h4>🧠 OneMind OS</h4>
+      <p style="font-size:0.9rem;">The OS for sovereign operations.</p>
+    </a>
+    <a href="/contact/" class="card" style="text-decoration:none;">
+      <h4>📡 Contact</h4>
+      <p style="font-size:0.9rem;">Tell me what you were looking for.</p>
+    </a>
+  </div>
+</section>
+</BaseLayout>

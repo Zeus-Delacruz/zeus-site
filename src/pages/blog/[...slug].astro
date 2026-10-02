@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const date = post.data.pubDate.toLocaleDateString('en-US', {
+  year: 'numeric', month: 'long', day: 'numeric',
+});
+const readingTime = Math.max(1, Math.round(post.body.split(/\s+/).length / 200));
+---
+
+<BaseLayout title={`${post.data.title} — Zeus DeLaCruz`} description={post.data.description}>
+  <section class="hero-full" style="min-height:auto;padding:3rem 0 1.5rem !important;">
+    <div class="hero-badge">{post.data.tags[0] ?? 'dispatch'}</div>
+    <h1 style="font-size:clamp(1.9rem, 4vw, 3rem);max-width:860px;">{post.data.title}</h1>
+    <p class="hero-sub" style="font-size:1.05rem;margin-top:1rem;">{post.data.description}</p>
+    <p class="text-muted" style="margin-top:1.25rem;font-size:0.82rem;">
+      {date} · {readingTime} min read
+    </p>
+  </section>
+
+  <section style="padding:0.5rem 0 4rem !important;">
+    <article class="post-content">
+      <Content />
+    </article>
+
+    <div style="margin-top:3rem;padding-top:2rem;border-top:1px solid var(--line2);max-width:720px;margin-left:auto;margin-right:auto;">
+      {post.data.tags.map((t) => (
+        <a href="/blog/" class="post-tag" style="margin-right:0.5rem;">{t}</a>
+      ))}
+    </div>
+
+    <div style="text-align:center;margin-top:3.5rem;">
+      <a href="/blog/" class="btn-ghost">← All posts</a>
+      <div style="margin-top:2rem;">
+        <a href="/resources/starter-kit/" class="btn-primary">Get the Starter Kit →</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
