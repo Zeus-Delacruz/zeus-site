@@ -1,0 +1,80 @@
+---
+// BaseLayout.astro — Chrome wrapper for every page
+// Nav at top, Footer at bottom, zeus.css injected
+import Nav from '../components/Nav.astro';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zeus DeLaCruz — Builder, Operator, Architect</title>
+  <meta name="description" content="I build sovereign infrastructure — AI agents, meshed networks, robotic systems, and the operating system that runs them all. Self-hosted. Open-source. Yours forever." />
+  <link rel="stylesheet" href="/styles/zeus.css" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+</head>
+<body>
+  <Nav />
+
+  <main>
+    <slot />
+  </main>
+
+  <footer class="zeus-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div class="footer-brand">Zeus DeLaCruz</div>
+        <p style="max-width:240px;">Building sovereign infrastructure — AI, TAK, NATS, robotics. Self-hosted. Open core. Yours forever.</p>
+        <div style="display:flex;gap:0.5rem;margin-top:0.75rem;">
+          <a href="https://youtube.com/@zeusdelacruz" class="footer-social-icon" target="_blank">▶</a>
+          <a href="https://x.com/zeusdelacruz" class="footer-social-icon" target="_blank">𝕏</a>
+          <a href="https://instagram.com/zeusdelacruz" class="footer-social-icon" target="_blank">◉</a>
+          <a href="https://tiktok.com/@zeusdelacruz" class="footer-social-icon" target="_blank">♪</a>
+          <a href="https://github.com/onemindos" class="footer-social-icon" target="_blank">⌥</a>
+          <a href="https://linkedin.com/in/zeusdelacruz" class="footer-social-icon" target="_blank">in</a>
+        </div>
+      </div>
+
+      <div class="footer-link-group">
+        <div class="footer-link-heading">Services</div>
+        <a href="/services/consulting/">Consulting</a>
+        <a href="/services/coaching/">Coaching</a>
+        <a href="/services/speaking/">Speaking</a>
+        <a href="/services/system-building/">System Building</a>
+      </div>
+
+      <div class="footer-link-group">
+        <div class="footer-link-heading">OneMind OS</div>
+        <a href="/onemind/">Overview</a>
+        <a href="/onemind/agents/">AI Agents</a>
+        <a href="/onemind/agents/legacy/">Legacy</a>
+        <a href="/onemind/plugins/">Plugins</a>
+        <a href="/onemind/robotics/">Hardware</a>
+        <a href="/onemind/nats/">NATS Bus</a>
+        <a href="/onemind/education/">Education</a>
+        <a href="/onemind/tools/">Tools</a>
+      </div>
+
+      <div class="footer-link-group">
+        <div class="footer-link-heading">Resources</div>
+        <a href="/resources/starter-kit/">Starter Kit</a>
+        <a href="/resources/github/">GitHub</a>
+        <a href="/resources/community/">Community ↗</a>
+      </div>
+
+      <div class="footer-link-group">
+        <div class="footer-link-heading">Site</div>
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contact/">Contact</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Zeus DeLaCruz · OneMind OS · Built on sovereign infrastructure · No cookies. No trackers. No third-party scripts except where you opt in (Zoho forms).</p>
+    </div>
+  </footer>
+</body>
+</html>
