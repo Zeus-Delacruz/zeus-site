@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Starter Kit — Zeus DeLaCruz" description="The Sovereign Stack Starter Kit — everything you need to start building.">
+<!-- Starter Kit v2 | /resources/starter-kit/ -->
+<section class="hero-full" style="min-height:auto;padding:3rem 0 2rem;">
+  <div class="hero-badge">FREE DOWNLOAD</div>
+  <h1 style="font-size:2.8rem;">The <span style="color:var(--accent-bright);">Sovereign Stack</span> Starter Kit</h1>
+  <p class="hero-sub" style="font-size:1.15rem;max-width:620px;">10 commands. Full docker-compose. NATS subject map. Architecture diagram. Everything you need to launch your own sovereign operations center in 30 minutes.</p>
+  <div style="margin-top:1.5rem;">
+    <a href="#" class="btn-primary" style="display:inline-block;font-size:1.1rem;padding:16px 36px;">Download the Starter Kit →</a>
+    <p style="margin-top:0.5rem;font-size:0.85rem;color:#9ca3af;">⚠️ GHL opt-in form — go.zeusdelacruz.com funnel entry</p>
+  </div>
+</section>
+
+<section style="padding:2rem 0;border-top:1px solid var(--line);">
+  <h2 style="color:var(--accent-bright);margin-bottom:1.5rem;">What's Inside</h2>
+  <div class="card-grid two-col">
+    <div class="card"><h4>📐 Architecture Diagram</h4><p>The full OneMind stack visualized. Every component, every port, every data flow. The map you'll reference forever.</p></div>
+    <div class="card"><h4>🐳 docker-compose.yml</h4><p>One file. 12 services. NATS, TAK Server, ClickHouse, Legacy agent, MediaMTX, Frigate, Grafana, and more. `docker compose up -d` and it's running.</p></div>
+    <div class="card"><h4>📡 NATS Subject Map</h4><p>Every subject in the fabric, documented. Pub/sub patterns. JetStream stream configs. Leaf node routing. The nervous system on one page.</p></div>
+    <div class="card"><h4>🏗️ Build Notes</h4><p>Why each component was chosen. The tradeoffs. The alternatives considered. Not just what to run — why to run it.</p></div>
+    <div class="card"><h4>🔐 Security Baseline</h4><p>Firewall rules. Tailscale mesh config. Certificate management. The minimum security for a sovereign stack.</p></div>
+    <div class="card"><h4>🚀 10-Command Quickstart</h4><p>The exact commands I run on a fresh server. Copy, paste, running. From blank VPS to sovereign ops center in 10 commands.</p></div>
+  </div>
+</section>
+
+<section style="padding:2rem 0;border-top:1px solid var(--line);">
+  <h2 style="color:var(--accent-bright);margin-bottom:1rem;">After You Download</h2>
+  <p>You'll get a 5-email sequence over the next week:</p>
+  <ol style="margin-top:1rem;display:flex;flex-direction:column;gap:0.75rem;">
+    <li><strong>The Story</strong> — why sovereignty was lost and how we're taking it back</li>
+    <li><strong>The Proof</strong> — OneMind, live. What it looks like running on real hardware</li>
+    <li><strong>The Problem</strong> — why renting infrastructure is a trap (with math)</li>
+    <li><strong>The Offer</strong> — the Sovereign Ops Community. $49/mo founding. First 50 lock forever.</li>
+    <li><strong>The Urgency</strong> — the founding 50 spots. What happens when they're gone.</li>
+  </ol>
+  <p style="margin-top:1.5rem;"><strong>No spam. No "upgrade to pro."</strong> The Starter Kit is actually free, actually useful, and you can unsubscribe anytime. The email sequence is optional — the download is not gated behind it (coming soon).</p>
+</section>
+
+<div style="text-align:center;padding:2rem 0;">
+  <a href="#" class="btn-primary" style="display:inline-block;font-size:1rem;">Get the Starter Kit →</a>
+</div>
+</BaseLayout>

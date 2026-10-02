@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="LE — Legacy Evolution | OneMind OS" description="LE — the evolution pillar. Home, family, estate, community.">
+<!-- LE — Legacy Evolution | /onemind/agents/le/ -->
+<section class="hero-full" style="min-height:auto;padding:3rem 0 2rem;">
+  <div class="hero-badge">🏡 PILLAR AGENT</div>
+  <h1 style="font-size:2.8rem;margin-bottom:0.5rem;"><span style="color:var(--accent-bright);">LE</span> — Legacy Evolution</h1>
+  <p class="hero-sub" style="font-size:1.1rem;max-width:600px;">Home, family, estate, heritage, and community — the roots that ground everything. Deployable as a Hermes agent profile on your fabric.</p>
+  <div style="margin-top:1.5rem;display:flex;gap:0.75rem;flex-wrap:wrap;">
+    <span class="stat-chip">Model: Kimi K2.6</span>
+    <span class="stat-chip">262K Context</span>
+    <span class="stat-chip">🏡 Evolution</span>
+  </div>
+</section>
+
+<section style="padding:2rem 0;">
+  <h2 style="color:var(--accent-bright);margin-bottom:1rem;">Domain</h2>
+  <p>Legacy Evolution covers the ground beneath your feet — the home, the land, the family, the heritage. Everything that endures beyond you. The long game.</p>
+
+  <div class="card-grid two-col" style="margin-top:2rem;">
+    <div class="card">
+      <h4>🏠 Home</h4>
+      <p>Smart home integration via Home Assistant, energy monitoring, security cameras, climate control. The house thinks.</p>
+    </div>
+    <div class="card">
+      <h4>🌱 Land</h4>
+      <p>Greenhouse sensors, soil monitoring, irrigation control, farmOS integration. The homestead is instrumented.</p>
+    </div>
+    <div class="card">
+      <h4>👨‍👩‍👧‍👦 Family</h4>
+      <p>Records management, family documentation, archive curation, photo/video vault. Heritage preserved digitally.</p>
+    </div>
+    <div class="card">
+      <h4>📜 Estate</h4>
+      <p>Legal documents, wills, trusts, property records, insurance. The structure that holds everything.</p>
+    </div>
+    <div class="card">
+      <h4>🏘️ Community</h4>
+      <p>Neighborhood mesh, local resource sharing, community event coordination. The village layer.</p>
+    </div>
+    <div class="card">
+      <h4>🌍 Heritage</h4>
+      <p>Cultural preservation, language, traditions, stories. What you pass down.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding:2rem 0;border-top:1px solid var(--line);">
+  <h2 style="color:var(--accent-bright);margin-bottom:1rem;">How to Deploy</h2>
+  <div style="background:var(--black-2);border-radius:0.5rem;padding:1.5rem;border:1px solid var(--line);margin-bottom:1.5rem;">
+    <p style="font-family:monospace;font-size:0.85rem;color:var(--accent-bright);">$ nats pub agents.prompt.hermes.zeus.le "Check greenhouse soil moisture"</p>
+    <p style="margin-top:0.75rem;">LE responds at <code style="background:var(--black-3);padding:0.125rem 0.375rem;border-radius:0.25rem;">agents.prompt.hermes.zeus.le</code>. Connect your Home Assistant, farmOS, and sensor networks directly to the bus.</p>
+  </div>
+  <p><strong>Profile config:</strong> <a href="/resources/github/" style="color:var(--accent-bright);">omos-legacy → profiles/le/</a></p>
+</section>
+
+<div style="text-align:center;padding:2rem 0;">
+  <a href="/resources/starter-kit/" class="btn-primary" style="display:inline-block;font-size:1rem;">Get the Starter Kit →</a>
+</div>
+</BaseLayout>

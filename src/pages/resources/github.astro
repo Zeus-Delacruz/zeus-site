@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="GitHub — Zeus DeLaCruz" description="Open-source repos from the OneMind build — agents, TAK, tools.">
+<!-- GitHub v2 | /resources/github/ -->
+<section class="hero-full" style="min-height:auto;padding:3rem 0 2rem;">
+  <div class="hero-badge">OPEN SOURCE</div>
+  <h1 style="font-size:2.8rem;">All the code. <span style="color:var(--accent-bright);">Every commit.</span> Fork it.</h1>
+  <p class="hero-sub" style="font-size:1.1rem;max-width:620px;">I build in public. Every repo that powers OneMind OS is open source. The agents, the bus, the plugins, the UI — all of it. Take it. Build with it. Ship your own.</p>
+</section>
+
+<section style="padding:2rem 0;">
+  <h2 style="color:var(--accent-bright);margin-bottom:1.5rem;">The Core Repos</h2>
+  <div class="card-grid two-col">
+    <div class="card">
+      <h4>🧠 omos-legacy</h4>
+      <p style="font-size:0.9rem;"><strong>Legacy's brain.</strong> The sovereign AI agent system. 5 agent profiles (Legacy, SO, HP, LE, GE). All skills, all memory, all configs. The seed/ directory builds the full agent genome. Clone and deploy your own Legacy.</p>
+      <p style="font-size:0.8rem;color:var(--accent-bright);margin-top:0.5rem;">github.com/onemindos/omos-legacy</p>
+    </div>
+    <div class="card">
+      <h4>🏗️ omos</h4>
+      <p style="font-size:0.9rem;"><strong>OneMind's body.</strong> Infrastructure-as-code. Kubernetes manifests, docker-compose stacks, service configurations. NATS cluster topology. TAK Server deployment. The physical layer.</p>
+      <p style="font-size:0.8rem;color:var(--accent-bright);margin-top:0.5rem;">github.com/onemindos/omos</p>
+    </div>
+    <div class="card">
+      <h4>🖥️ omos-ui</h4>
+      <p style="font-size:0.9rem;"><strong>The face.</strong> OneMind's web dashboard. Agent chat interface. TAK integration. System health. Built on Next.js. Connects to the NATS bus via WebSocket.</p>
+      <p style="font-size:0.8rem;color:var(--accent-bright);margin-top:0.5rem;">github.com/onemindos/omos-ui</p>
+    </div>
+    <div class="card">
+      <h4>🗺️ OneTAK</h4>
+      <p style="font-size:0.9rem;"><strong>The eyes.</strong> TAK with intelligence built in. Plugins for NATS bridging, AI agent tasking, voice comms, ClickHouse replay, Hermes integration. The operators' TAK.</p>
+      <p style="font-size:0.8rem;color:var(--accent-bright);margin-top:0.5rem;">github.com/onemindos/OneTAK</p>
+    </div>
+    <div class="card">
+      <h4>🌐 zeus-site</h4>
+      <p style="font-size:0.9rem;"><strong>This website.</strong> The source design system — originally Next.js, ported to WordPress. The exact CSS, layout, and component library. Reference for your own builder site.</p>
+      <p style="font-size:0.8rem;color:var(--accent-bright);margin-top:0.5rem;">github.com/onemindos/zeus-site</p>
+    </div>
+    <div class="card">
+      <h4>🔧 More on GitHub</h4>
+      <p style="font-size:0.9rem;">TAK plugins (onetak-plugin-nats, onetak-plugin-hermes, onetak-plugin-ops), the NATS agent toolkit, ClickHouse schemas, Grafana dashboards. Everything I build ships to GitHub.</p>
+      <p style="font-size:0.8rem;color:var(--accent-bright);margin-top:0.5rem;">github.com/onemindos</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding:2rem 0;border-top:1px solid var(--line);text-align:center;">
+  <h2 style="color:var(--accent-bright);margin-bottom:1rem;">License & Usage</h2>
+  <p style="max-width:600px;margin:0 auto;">Everything is open source. MIT or Apache 2.0. Take the code. Build your own stack. Sell your own services on top of it. The only thing I ask: if you build something cool, show me. The community grows when builders share.</p>
+  <div style="margin-top:1.5rem;">
+    <a href="https://github.com/onemindos" class="btn-primary" style="display:inline-block;font-size:1rem;">github.com/onemindos →</a>
+  </div>
+</section>
+</BaseLayout>

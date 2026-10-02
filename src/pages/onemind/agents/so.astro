@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="SO — Sovereign Operations | OneMind OS" description="SO — the operations pillar. Infra, security, development, TAK.">
+<!-- SO — Sovereign Operations | /onemind/agents/so/ -->
+<section class="hero-full" style="min-height:auto;padding:3rem 0 2rem;">
+  <div class="hero-badge">⚡ PILLAR AGENT</div>
+  <h1 style="font-size:2.8rem;margin-bottom:0.5rem;"><span style="color:var(--accent-bright);">SO</span> — Sovereign Operations</h1>
+  <p class="hero-sub" style="font-size:1.1rem;max-width:600px;">Tech, infrastructure, security, development, TAK, and NATS — the operator's operator. Deployable as a Hermes agent profile on your fabric.</p>
+  <div style="margin-top:1.5rem;display:flex;gap:0.75rem;flex-wrap:wrap;">
+    <span class="stat-chip">Model: DeepSeek V4 Pro</span>
+    <span class="stat-chip">262K Context</span>
+    <span class="stat-chip">⚡ Operations</span>
+  </div>
+</section>
+
+<section style="padding:2rem 0;">
+  <h2 style="color:var(--accent-bright);margin-bottom:1rem;">Domain</h2>
+  <p>Sovereign Operations covers everything that makes the OneMind fabric run — the infrastructure, the bus, the edge devices, and the security layers that keep it all sovereign.</p>
+
+  <div class="card-grid two-col" style="margin-top:2rem;">
+    <div class="card">
+      <h4>🔧 Infrastructure</h4>
+      <p>Kubernetes clusters, Docker stacks, Tailscale mesh, DOKS operations. SO owns the hardware and the cloud.</p>
+    </div>
+    <div class="card">
+      <h4>🛡️ Security</h4>
+      <p>Threat detection, audit logging, firewall rules, access control. Guard mode activates on signal.</p>
+    </div>
+    <div class="card">
+      <h4>📡 NATS Bus</h4>
+      <p>Subject topology, JetStream config, leaf node routing, MQTT bridges. The nervous system itself.</p>
+    </div>
+    <div class="card">
+      <h4>🗺️ TAK Operations</h4>
+      <p>TAK Server hardening, plugin development, mission data management, Common Operating Picture.</p>
+    </div>
+    <div class="card">
+      <h4>💻 Development</h4>
+      <p>Code review, PR orchestration, CI/CD pipelines, infrastructure-as-code. SO forges the tools.</p>
+    </div>
+    <div class="card">
+      <h4>🤖 Edge Deployment</h4>
+      <p>Raspberry Pi, Jetson, Android — bringing the fabric to the tactical edge.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding:2rem 0;border-top:1px solid var(--line);">
+  <h2 style="color:var(--accent-bright);margin-bottom:1rem;">How to Deploy</h2>
+  <div style="background:var(--black-2);border-radius:0.5rem;padding:1.5rem;border:1px solid var(--line);margin-bottom:1.5rem;">
+    <p style="font-family:monospace;font-size:0.85rem;color:var(--accent-bright);">$ nats pub agents.prompt.hermes.zeus.so "Run infra health check"</p>
+    <p style="margin-top:0.75rem;">SO responds on the NATS bus at <code style="background:var(--black-3);padding:0.125rem 0.375rem;border-radius:0.25rem;">agents.prompt.hermes.zeus.so</code>. Task it directly from any NATS-connected device — CLI, TAK plugin, web dashboard, or another agent.</p>
+  </div>
+  <p><strong>Profile config available on GitHub:</strong> <a href="/resources/github/" style="color:var(--accent-bright);">omos-legacy → profiles/so/</a> — includes model pinning, skill set, and NATS routing.</p>
+</section>
+
+<section style="padding:2rem 0;border-top:1px solid var(--line);">
+  <h2 style="color:var(--accent-bright);margin-bottom:1rem;">Escalation Path</h2>
+  <p>SO handles operations autonomously. When a decision crosses domains — security impacts business, infrastructure changes affect family systems — SO escalates to <strong>Legacy</strong> at <code style="background:var(--black-3);padding:0.125rem 0.375rem;border-radius:0.25rem;">agents.prompt.hermes.zeus.legacy</code> for cross-pillar arbitration.</p>
+</section>
+
+<div style="text-align:center;padding:2rem 0;">
+  <a href="/resources/starter-kit/" class="btn-primary" style="display:inline-block;font-size:1rem;">Get the Starter Kit →</a>
+</div>
+</BaseLayout>

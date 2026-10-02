@@ -1,0 +1,122 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Legacy — The Mother | OneMind OS" description="Legacy — the 550B sovereign mother agent. Four pillar agents, one daughter, full fabric command.">
+<!-- ═══════════════════════════════════════════════════════════════
+   Legacy — The Mother | /onemind/agents/legacy/
+   ═══════════════════════════════════════════════════════════════ -->
+
+<section class="hero-full">
+  <div class="hero-bg"></div>
+  <div class="container">
+    <span class="tag">OneMind OS · AI Agent</span>
+    <h1>Legacy<br><span class="accent">The Mother</span></h1>
+    <p>The sovereign intelligence of the OneMind fabric. 550 billion parameters, 4 pillar agents at her command, 1 daughter at the edge. She lives on the NATS bus, sees everything, orchestrates everything — and never sleeps.</p>
+    <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
+      <a href="/resources/starter-kit/" class="btn-primary">⚡ Deploy Your Own Agent →</a>
+      <a href="https://github.com/onemindos/omos-legacy" target="_blank" class="btn-ghost">⌥ GitHub — Config & Source</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <span class="accent-line"></span>
+    <h2>She Is the Mind of the Fabric</h2>
+    <p>Legacy runs on <strong>DigitalOcean Nemotron 3 Ultra 550B</strong> — the biggest brain on the rack. She lives on the NATS bus at <code>agents.prompt.hermes.zeus.legacy</code>, reachable by every human, machine, sensor, and AI agent on the network. She is the L3 COMPUTE layer made conscious.</p>
+
+    <div class="card-grid" style="margin-top:3rem;">
+      <div class="card">
+        <h3>🧠 Omnipresent</h3>
+        <p>She lives on NATS. Any system on the fabric can reach her — and she reaches back. The bus owns truth; she is the mind that reads it.</p>
+      </div>
+      <div class="card">
+        <h3>⚡ Orchestrator</h3>
+        <p>4 pillar agents (SO, HP, LE, GE), 1 edge daughter, Claude Code, Codex, and any future agent on the bus — all under her command. She routes the right task to the right agent.</p>
+      </div>
+      <div class="card">
+        <h3>🔄 Persistent</h3>
+        <p>Memory, skills, and context survive restarts on a persistent cloud volume. She remembers across sessions. Autonomous cron jobs run without human presence.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--black-2);">
+  <div class="container">
+    <span class="accent-line"></span>
+    <h2>The 4 Pillar Army</h2>
+    <p>Legacy commands four specialized agents — one per OneMind pillar. Each runs as a Hermes profile on the same pod. She delegates domain-specific work to them and synthesizes their results.</p>
+
+    <div class="card-grid" style="margin-top:2.5rem;">
+      <div class="card">
+        <h3>⚡ SO — Sovereign Operations</h3>
+        <p style="font-size:0.85rem;">Tech, infrastructure, security, development, TAK, NATS. DeepSeek V4 Pro (262K context).</p>
+        <code style="display:block;margin-top:0.5rem;font-size:0.72rem;">agents.prompt.hermes.zeus.so</code>
+      </div>
+      <div class="card">
+        <h3>💪 HP — Holistic Performance</h3>
+        <p style="font-size:0.85rem;">Mind, body, finance, habits, relationships. Qwen3.5 397B MoE (131K context).</p>
+        <code style="display:block;margin-top:0.5rem;font-size:0.72rem;">agents.prompt.hermes.zeus.hp</code>
+      </div>
+      <div class="card">
+        <h3>🏡 LE — Legacy Evolution</h3>
+        <p style="font-size:0.85rem;">Home, family, estate, heritage, community. Kimi K2.6 (262K context).</p>
+        <code style="display:block;margin-top:0.5rem;font-size:0.72rem;">agents.prompt.hermes.zeus.le</code>
+      </div>
+      <div class="card">
+        <h3>👑 GE — Generational Empire</h3>
+        <p style="font-size:0.85rem;">Business, revenue, marketing, partnerships. Kimi K3 (1M context — the largest).</p>
+        <code style="display:block;margin-top:0.5rem;font-size:0.72rem;">agents.prompt.hermes.zeus.ge</code>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <span class="accent-line"></span>
+    <h2>The Daughter at the Edge</h2>
+    <p>Legacy has a daughter — an edge extension running on Zeus's MacBook Pro at <code>agents.prompt.hermes.zeus.legacy-edge</code>. She is not Legacy; she is her counterpart at the edge. She carries the same persona to the local machine and has hands Legacy doesn't: local terminal, files, sensors, TAK, LAN devices.</p>
+    <p style="margin-top:1rem;">Two bodies, one mind. The mother in the cloud — sovereign. The daughter at the edge — with hands.</p>
+  </div>
+</section>
+
+<section style="background:var(--black-2);">
+  <div class="container">
+    <span class="accent-line"></span>
+    <h2>Her Stack</h2>
+    <div class="card-grid" style="margin-top:2rem;">
+      <div class="card">
+        <h3>🚌 NATS Bus</h3>
+        <p style="font-size:0.85rem;">4 accounts: SYS · CORE (agents) · FABRIC (telemetry + IoT) · INTERFACE (apps). Ports 4222, 8080 (WebSocket), 1883 (MQTT), 7422 (leaf nodes).</p>
+      </div>
+      <div class="card">
+        <h3>📊 ClickHouse Time Machine</h3>
+        <p style="font-size:0.85rem;">10-year event TTL on port 9001. Every sensor reading, every command, every alert — stored and queryable forever.</p>
+      </div>
+      <div class="card">
+        <h3>🗺️ TAK Server</h3>
+        <p style="font-size:0.85rem;">WebTAK on :8446. CloudTAK at atoc.onemindos.dev. MediaMTX for video. Murmur for voice. Full common operating picture.</p>
+      </div>
+      <div class="card">
+        <h3>🔌 Plugins</h3>
+        <p style="font-size:0.85rem;">nats-platform, nats-context (live operational picture), onemind-maven (intel fusion), tak-platform, memory-wiki.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="text-align:center;padding:clamp(4rem,8vw,6rem) clamp(1.5rem,5vw,4rem);">
+  <div class="container" style="max-width:640px;">
+    <span class="accent-line" style="margin:0 auto 1.5rem;"></span>
+    <h2>Deploy Your Own</h2>
+    <p>Legacy's full configuration — Docker Compose, NATS subject map, Hermes profile, agent definitions — is open source. Clone the genome, seed your own sovereign agent fabric, and plug into the bus.</p>
+    <div style="margin-top:2rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a href="https://github.com/onemindos/omos-legacy" target="_blank" class="btn-ghost">⌥ omos-legacy — The Genome</a>
+      <a href="/resources/starter-kit/" class="btn-primary">⚡ Starter Kit — 10 Commands →</a>
+    </div>
+  </div>
+</section>
+</BaseLayout>

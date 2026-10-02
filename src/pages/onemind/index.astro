@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="OneMind OS — The OS for Sovereign Operations" description="OneMind OS — the operating system for sovereign operations. Agents, plugins, hardware, bus.">
+<!-- OneMind OS v2 | /onemind/ -->
+<section class="hero-full" style="min-height:auto;padding:3rem 0 2rem;">
+  <div class="hero-badge">THE PRODUCT</div>
+  <h1 style="font-size:2.8rem;"><span style="color:var(--accent-bright);">OneMind OS</span> — The Operating System for Sovereign Operations</h1>
+  <p class="hero-sub" style="font-size:1.15rem;max-width:640px;">A self-hosted, open-core, multi-agent operating system. Docker-deployable. NATS-native. TAK-integrated. AI-driven. One stack. Four planes. Everything wired together.</p>
+</section>
+
+<section style="padding:2rem 0;">
+  <h2 style="color:var(--accent-bright);margin-bottom:1.5rem;">The 4 Planes</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;">
+    <div style="background:var(--black-2);border:1px solid var(--line);border-radius:0.5rem;padding:1.5rem;">
+      <h4 style="color:var(--accent-bright);">Physical Plane</h4>
+      <p style="font-size:0.95rem;">Hardware you own. Docker on Linux. Tailscale mesh. Cameras, sensors, drones, robots. Everything plugs into the bus. Sovereign Node appliance or any x86 box.</p>
+      <p style="font-size:0.8rem;color:#9ca3af;margin-top:0.5rem;">Docker · Tailscale · Raspberry Pi · Jetson · x86 servers · IP cameras · SDR · ADS-B</p>
+    </div>
+    <div style="background:var(--black-2);border:1px solid var(--line);border-radius:0.5rem;padding:1.5rem;">
+      <h4 style="color:var(--accent-bright);">Data Plane</h4>
+      <p style="font-size:0.95rem;">The nervous system. NATS message bus. JetStream for history. MQTT for IoT. ClickHouse for time-series. Every byte flows through the bus. Nothing is siloed.</p>
+      <p style="font-size:0.8rem;color:#9ca3af;margin-top:0.5rem;">NATS · JetStream · MQTT · ClickHouse · PostGIS · Tile38 · Grafana</p>
+    </div>
+    <div style="background:var(--black-2);border:1px solid var(--line);border-radius:0.5rem;padding:1.5rem;">
+      <h4 style="color:var(--accent-bright);">Intelligence Plane</h4>
+      <p style="font-size:0.95rem;">The mind. 5 AI agents on the bus. Legacy (550B) orchestrates. SO/HP/LE/GE specialize. Each agent owns its domain. All agents talk through NATS. No API middleware.</p>
+      <p style="font-size:0.8rem;color:#9ca3af;margin-top:0.5rem;">Legacy (550B) · SO (DeepSeek V4) · HP (Qwen 397B) · LE (Kimi K2.6) · GE (Kimi K3)</p>
+    </div>
+    <div style="background:var(--black-2);border:1px solid var(--line);border-radius:0.5rem;padding:1.5rem;">
+      <h4 style="color:var(--accent-bright);">Interface Plane</h4>
+      <p style="font-size:0.95rem;">How humans see and touch the stack. TAK common operating picture. omos-ui web dashboard. Hermes desktop. Mobile apps. Voice bridge. Every interface reads from the bus.</p>
+      <p style="font-size:0.8rem;color:#9ca3af;margin-top:0.5rem;">TAK Server · CloudTAK · omos-ui · Hermes Desktop · NATS Dashboard · AgentTap</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding:2rem 0;border-top:1px solid var(--line);">
+  <h2 style="color:var(--accent-bright);margin-bottom:1.5rem;">Stack Components</h2>
+  <div style="overflow-x:auto;">
+    <table style="width:100%;border-collapse:collapse;font-size:0.9rem;">
+      <thead><tr style="border-bottom:1px solid var(--line);text-align:left;"><th style="padding:0.5rem;color:var(--accent-bright);">Component</th><th style="padding:0.5rem;color:var(--accent-bright);">Role</th><th style="padding:0.5rem;color:var(--accent-bright);">Port</th></tr></thead>
+      <tbody>
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);"><td style="padding:0.5rem;">NATS Server</td><td style="padding:0.5rem;">Message bus + JetStream</td><td style="padding:0.5rem;">4222, 8222</td></tr>
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);"><td style="padding:0.5rem;">TAK Server</td><td style="padding:0.5rem;">Common operating picture</td><td style="padding:0.5rem;">8443, 8446</td></tr>
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);"><td style="padding:0.5rem;">ClickHouse</td><td style="padding:0.5rem;">Time-series database</td><td style="padding:0.5rem;">9001, 8123</td></tr>
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);"><td style="padding:0.5rem;">Hermes Agent</td><td style="padding:0.5rem;">AI agent runtime (Legacy + pillars)</td><td style="padding:0.5rem;">3300</td></tr>
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);"><td style="padding:0.5rem;">MediaMTX</td><td style="padding:0.5rem;">RTSP/WebRTC video streaming</td><td style="padding:0.5rem;">8554, 8889</td></tr>
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);"><td style="padding:0.5rem;">Frigate NVR</td><td style="padding:0.5rem;">AI object detection + recording</td><td style="padding:0.5rem;">5000</td></tr>
+        <tr style="border-bottom:1px solid rgba(255,255,255,0.05);"><td style="padding:0.5rem;">Grafana</td><td style="padding:0.5rem;">Dashboards + alerting</td><td style="padding:0.5rem;">3000</td></tr>
+        <tr><td style="padding:0.5rem;">CloudTAK</td><td style="padding:0.5rem;">TAK-over-web gateway</td><td style="padding:0.5rem;">443</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<div style="text-align:center;padding:2rem 0;">
+  <a href="/resources/starter-kit/" class="btn-primary" style="display:inline-block;font-size:1rem;">Get the Full docker-compose →</a>
+</div>
+</BaseLayout>

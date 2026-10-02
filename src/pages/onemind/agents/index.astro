@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="AI Agents — OneMind OS" description="The OneMind agent fleet — Legacy the Mother and her four pillar agents.">
+<!-- Agents Hub v2 | /onemind/agents/ -->
+<section class="hero-full" style="min-height:auto;padding:3rem 0 2rem;">
+  <div class="hero-badge">THE MIND</div>
+  <h1 style="font-size:2.8rem;"><span style="color:var(--accent-bright);">AI Agent</span> Fabric</h1>
+  <p class="hero-sub" style="font-size:1.1rem;max-width:600px;">6 AI agents living on the NATS bus. One mother. Four pillar specialists. One edge daughter. All deployable from a single docker-compose. All taskable from any NATS-connected device.</p>
+</section>
+
+<section style="padding:2rem 0;">
+  <div class="card-grid two-col">
+    <div class="card" style="border-left:3px solid var(--accent-bright);"><h4>🧠 Legacy — The Mother</h4><p style="font-size:0.9rem;">550B parameters. The sovereign intelligence. Orchestrates the 4 pillars. Lives in the cloud. Never sleeps. <strong>Reach her at agents.prompt.hermes.zeus.legacy</strong></p><a href="/onemind/agents/legacy/" style="color:var(--accent-bright);font-size:0.85rem;">Full profile →</a></div>
+    <div class="card" style="border-left:3px solid var(--accent-bright);"><h4>⚡ SO — Sovereign Operations</h4><p style="font-size:0.9rem;">DeepSeek V4 Pro 262K. Tech, infra, security, TAK, NATS. The operator's operator. <strong>Reach at agents.prompt.hermes.zeus.so</strong></p><a href="/onemind/agents/so/" style="color:var(--accent-bright);font-size:0.85rem;">Full profile →</a></div>
+    <div class="card" style="border-left:3px solid var(--accent-bright);"><h4>💪 HP — Holistic Performance</h4><p style="font-size:0.9rem;">Qwen3.5 397B MoE 131K. Mind, body, finance, habits. The human OS. <strong>Reach at agents.prompt.hermes.zeus.hp</strong></p><a href="/onemind/agents/hp/" style="color:var(--accent-bright);font-size:0.85rem;">Full profile →</a></div>
+    <div class="card" style="border-left:3px solid var(--accent-bright);"><h4>🏡 LE — Legacy Evolution</h4><p style="font-size:0.9rem;">Kimi K2.6 262K. Home, family, land, heritage. The roots. <strong>Reach at agents.prompt.hermes.zeus.le</strong></p><a href="/onemind/agents/le/" style="color:var(--accent-bright);font-size:0.85rem;">Full profile →</a></div>
+    <div class="card" style="border-left:3px solid var(--accent-bright);"><h4>👑 GE — Generational Empire</h4><p style="font-size:0.9rem;">Kimi K3 1M. Business, revenue, marketing. The engine. <strong>Reach at agents.prompt.hermes.zeus.ge</strong></p><a href="/onemind/agents/ge/" style="color:var(--accent-bright);font-size:0.85rem;">Full profile →</a></div>
+    <div class="card" style="border-left:3px solid var(--accent-bright);"><h4>💻 Legacy Edge — The Daughter</h4><p style="font-size:0.9rem;">Runs on Zeus's MacBook Pro. Local terminal, files, sensors, TAK, LAN devices. The mother's hands at the edge. <strong>Reach at agents.prompt.hermes.zeus.legacy-edge</strong></p><p style="font-size:0.8rem;color:#9ca3af;margin-top:0.5rem;">Profile config: omos-legacy → profiles/legacy-edge/</p></div>
+  </div>
+</section>
+
+<section style="padding:2rem 0;border-top:1px solid var(--line);">
+  <h2 style="color:var(--accent-bright);margin-bottom:1rem;">How the Fabric Works</h2>
+  <p>Every agent listens on a dedicated NATS subject. Anyone — human, machine, sensor, another agent — publishes a prompt to that subject. The agent processes it and publishes the result. No REST APIs. No polling. No webhooks. Pure pub-sub intelligence.</p>
+  <div style="background:var(--black-2);border-radius:0.5rem;padding:1.5rem;border:1px solid var(--line);margin-top:1.5rem;">
+    <p style="font-family:monospace;font-size:0.85rem;color:var(--accent-bright);">$ nats pub agents.prompt.hermes.zeus.so "Check cluster health"</p>
+    <p style="font-family:monospace;font-size:0.85rem;color:var(--accent-bright);margin-top:0.5rem;">$ nats req agents.prompt.hermes.zeus.ge "Pull this week's GHL pipeline"</p>
+    <p style="font-family:monospace;font-size:0.85rem;color:var(--accent-bright);margin-top:0.5rem;">$ nats pub agents.prompt.hermes.zeus.legacy "Orchestrate: SO audit infra + GE forecast revenue"</p>
+  </div>
+  <p style="margin-top:1.5rem;"><strong>Cross-pillar orchestration:</strong> Legacy receives a task, decomposes it into sub-tasks for each pillar, fans out via NATS, collects results, synthesizes, and publishes the final answer. All on the bus. All auditable.</p>
+</section>
+
+<div style="text-align:center;padding:2rem 0;">
+  <a href="/resources/starter-kit/" class="btn-primary" style="display:inline-block;font-size:1rem;">Deploy Your Own Agent Fabric →</a>
+</div>
+</BaseLayout>
