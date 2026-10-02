@@ -1,0 +1,192 @@
+---
+// Nav.astro — Zeus DeLaCruz site navigation v3.0
+// One file. Used on every page via BaseLayout.
+---
+
+<nav class="zeus-nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">Zeus DeLaCruz</a>
+
+    <!-- Desktop nav -->
+    <div class="nav-desktop">
+
+      <!-- Services dropdown -->
+      <div class="mega-parent">
+        <button class="mega-trigger" onclick="toggleDropdown('mega-dropdown-services',this)">Services ▾<span class="mega-chevron">⌄</span></button>
+        <div class="mega-dropdown mega-dropdown--sm" id="mega-dropdown-services">
+          <a href="/services/consulting/" class="mega-item">
+            <div class="mega-item-label">Consulting</div>
+            <div class="mega-item-desc">Done-with-you sprints — $2,500/$5,000</div>
+          </a>
+          <a href="/services/coaching/" class="mega-item">
+            <div class="mega-item-label">Coaching</div>
+            <div class="mega-item-desc">4-pillar 1-on-1 weekly sessions</div>
+          </a>
+          <a href="/services/speaking/" class="mega-item">
+            <div class="mega-item-label">Speaking</div>
+            <div class="mega-item-desc">Keynotes, workshops, panels</div>
+          </a>
+          <a href="/services/system-building/" class="mega-item">
+            <div class="mega-item-label">System Building</div>
+            <div class="mega-item-desc">Done-for-you — $7,500/$15,000</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- OneMind OS mega-menu -->
+      <div class="mega-parent">
+        <button class="mega-trigger" onclick="toggleDropdown('mega-dropdown-onemind',this)">OneMind OS ▾<span class="mega-chevron">⌄</span></button>
+        <div class="mega-dropdown" id="mega-dropdown-onemind">
+          <div class="mega-col">
+            <div class="mega-col-heading">Platform</div>
+            <a href="/onemind/" class="mega-item">
+              <div class="mega-item-label">Overview</div>
+              <div class="mega-item-desc">The OS for sovereign operations</div>
+            </a>
+            <a href="/onemind/agents/" class="mega-item">
+              <div class="mega-item-label">AI Agents</div>
+              <div class="mega-item-desc">Deployable intelligence on the fabric</div>
+            </a>
+            <a href="/onemind/agents/legacy/" class="mega-item" style="margin-left:1rem;border-left:1px solid var(--line);padding-left:1rem;">
+              <div class="mega-item-label" style="font-size:0.78rem;">→ Legacy</div>
+              <div class="mega-item-desc">The Mother — 550B sovereign AI agent</div>
+            </a>
+            <a href="/onemind/agents/so/" class="mega-item" style="margin-left:1rem;border-left:1px solid var(--line);padding-left:1rem;">
+              <div class="mega-item-label" style="font-size:0.78rem;">→ SO</div>
+              <div class="mega-item-desc">Sovereign Operations — DeepSeek V4 Pro 262K</div>
+            </a>
+            <a href="/onemind/agents/hp/" class="mega-item" style="margin-left:1rem;border-left:1px solid var(--line);padding-left:1rem;">
+              <div class="mega-item-label" style="font-size:0.78rem;">→ HP</div>
+              <div class="mega-item-desc">Holistic Performance — Qwen3.5 397B MoE 131K</div>
+            </a>
+            <a href="/onemind/agents/le/" class="mega-item" style="margin-left:1rem;border-left:1px solid var(--line);padding-left:1rem;">
+              <div class="mega-item-label" style="font-size:0.78rem;">→ LE</div>
+              <div class="mega-item-desc">Legacy Evolution — Kimi K2.6 262K</div>
+            </a>
+            <a href="/onemind/agents/ge/" class="mega-item" style="margin-left:1rem;border-left:1px solid var(--line);padding-left:1rem;">
+              <div class="mega-item-label" style="font-size:0.78rem;">→ GE</div>
+              <div class="mega-item-desc">Generational Empire — Kimi K3 1M</div>
+            </a>
+            <a href="/onemind/plugins/" class="mega-item">
+              <div class="mega-item-label">Plugins</div>
+              <div class="mega-item-desc">TAK, NATS, Hermes extensions</div>
+            </a>
+            <a href="/onemind/robotics/" class="mega-item">
+              <div class="mega-item-label">Hardware</div>
+              <div class="mega-item-desc">Sovereign Node, edge kits, field packs</div>
+            </a>
+          </div>
+          <div class="mega-col">
+            <div class="mega-col-heading">Stack</div>
+            <a href="/onemind/nats/" class="mega-item">
+              <div class="mega-item-label">NATS Bus</div>
+              <div class="mega-item-desc">The nervous system — subjects, JetStream, leaf nodes</div>
+            </a>
+            <a href="/onemind/education/" class="mega-item">
+              <div class="mega-item-label">Education</div>
+              <div class="mega-item-desc">8-module Sovereign Stack Blueprint</div>
+            </a>
+            <a href="/onemind/tools/" class="mega-item">
+              <div class="mega-item-label">Tools</div>
+              <div class="mega-item-desc">docker-compose, NATS map, agent profiles, dashboards</div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resources dropdown -->
+      <div class="mega-parent">
+        <button class="mega-trigger" onclick="toggleDropdown('mega-dropdown-resources',this)">Resources ▾<span class="mega-chevron">⌄</span></button>
+        <div class="mega-dropdown mega-dropdown--sm" id="mega-dropdown-resources">
+          <a href="/resources/starter-kit/" class="mega-item">
+            <div class="mega-item-label">Starter Kit</div>
+            <div class="mega-item-desc">Free — 10 commands, full docker-compose</div>
+          </a>
+          <a href="/resources/github/" class="mega-item">
+            <div class="mega-item-label">GitHub</div>
+            <div class="mega-item-desc">All repos — fork and build</div>
+          </a>
+          <a href="/resources/community/" class="mega-item">
+            <div class="mega-item-label">Community</div>
+            <div class="mega-item-desc">Sovereign Ops on Circle — $49/mo founding</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Simple links -->
+      <a href="/blog/" class="nav-simple-link">Blog</a>
+      <a href="/about/" class="nav-simple-link">About</a>
+      <a href="/contact/" class="nav-simple-link">Contact</a>
+
+      <!-- Social icons -->
+      <div style="display:flex;gap:0.375rem;margin-left:0.5rem;">
+        <a href="https://youtube.com/@zeusdelacruz" class="nav-social-icon" target="_blank" title="YouTube">▶</a>
+        <a href="https://x.com/zeusdelacruz" class="nav-social-icon" target="_blank" title="X">𝕏</a>
+        <a href="https://instagram.com/zeusdelacruz" class="nav-social-icon" target="_blank" title="Instagram">◉</a>
+        <a href="https://tiktok.com/@zeusdelacruz" class="nav-social-icon" target="_blank" title="TikTok">♪</a>
+        <a href="https://github.com/onemindos" class="nav-social-icon" target="_blank" title="GitHub">⌥</a>
+        <a href="https://linkedin.com/in/zeusdelacruz" class="nav-social-icon" target="_blank" title="LinkedIn">in</a>
+      </div>
+    </div>
+
+    <!-- CTA button -->
+    <div class="nav-right">
+      <a href="/resources/starter-kit/" class="btn-primary">Get the Starter Kit →</a>
+    </div>
+
+    <!-- Burger (mobile) -->
+    <button class="nav-burger" onclick="toggleMobileMenu()" aria-label="Menu">☰</button>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobile-menu">
+  <div class="mobile-section">
+    <div class="mobile-section-heading">Services</div>
+    <a href="/services/consulting/" class="mobile-section-link">Consulting</a>
+    <a href="/services/coaching/" class="mobile-section-link">Coaching</a>
+    <a href="/services/speaking/" class="mobile-section-link">Speaking</a>
+    <a href="/services/system-building/" class="mobile-section-link">System Building</a>
+  </div>
+  <div class="mobile-section">
+    <div class="mobile-section-heading">OneMind OS</div>
+    <a href="/onemind/" class="mobile-section-link">Overview</a>
+    <a href="/onemind/agents/" class="mobile-section-link">AI Agents</a>
+    <a href="/onemind/agents/legacy/" class="mobile-section-link" style="padding-left:1.5rem;">→ Legacy</a>
+    <a href="/onemind/agents/so/" class="mobile-section-link" style="padding-left:1.5rem;">→ SO</a>
+    <a href="/onemind/agents/hp/" class="mobile-section-link" style="padding-left:1.5rem;">→ HP</a>
+    <a href="/onemind/agents/le/" class="mobile-section-link" style="padding-left:1.5rem;">→ LE</a>
+    <a href="/onemind/agents/ge/" class="mobile-section-link" style="padding-left:1.5rem;">→ GE</a>
+    <a href="/onemind/plugins/" class="mobile-section-link">Plugins</a>
+    <a href="/onemind/robotics/" class="mobile-section-link">Hardware</a>
+    <a href="/onemind/nats/" class="mobile-section-link">NATS Bus</a>
+    <a href="/onemind/education/" class="mobile-section-link">Education</a>
+    <a href="/onemind/tools/" class="mobile-section-link">Tools</a>
+  </div>
+  <a href="/resources/starter-kit/" class="mobile-simple-link">Starter Kit</a>
+  <a href="/resources/github/" class="mobile-simple-link">GitHub</a>
+  <a href="/resources/community/" class="mobile-simple-link">Community</a>
+  <a href="/blog/" class="mobile-simple-link">Blog</a>
+  <a href="/about/" class="mobile-simple-link">About</a>
+  <a href="/contact/" class="mobile-simple-link">Contact</a>
+</div>
+
+<script is:inline>
+  function toggleDropdown(id, btn) {
+    var dd = document.getElementById(id);
+    if (!dd) return;
+    var isOpen = dd.classList.contains('open');
+    document.querySelectorAll('.mega-dropdown,.mega-dropdown--sm').forEach(function(d) { d.classList.remove('open'); });
+    document.querySelectorAll('.mega-trigger').forEach(function(b) { b.classList.remove('open'); });
+    if (!isOpen) { dd.classList.add('open'); btn.classList.add('open'); }
+  }
+  function toggleMobileMenu() {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  }
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.mega-parent')) {
+      document.querySelectorAll('.mega-dropdown,.mega-dropdown--sm').forEach(function(d) { d.classList.remove('open'); });
+      document.querySelectorAll('.mega-trigger').forEach(function(b) { b.classList.remove('open'); });
+    }
+  });
+</script>
